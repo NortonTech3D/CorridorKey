@@ -87,9 +87,19 @@ For the easiest experience, use the provided launcher scripts. These scripts lau
     *   `/Processed`: An RGBA image containing the Linear Foreground premultiplied against the Linear Alpha (EXR). This pass exists so you can immediately drop the footage into Premiere/Resolve for a quick preview without dealing with complex premultiplication routing. However, if you want more control over your image, working with the raw FG and Matte outputs will give you that.
     *   `/Comp`: A simple preview of the key composited over a checkerboard (PNG).
 
+## But What About Training and Datasets?
+
+If enough people find this project interesting I'll get the training program and datasets uploaded so we can all really go to town making the absolute best keyer fine tunes! Just hit me with some messages on the Corridor Creates discord or here. If enough people lock in, I'll get this stuff packaged up. Hardware requirements are beefy and the gigabytes are plentiful so I don't want to commit the time unless there's demand.
+
 ## Advanced Usage
 
 For developers looking for more details on the specifics of what is happening in the CorridorKey engine, check out the README in the `/CorridorKeyModule` folder. We also have a dedicated handover document outlining the pipeline architecture for AI assistants in `/docs/LLM_HANDOVER.md`.
+
+## CorridoKey Licensing and Permissions
+
+Use this tool for whatever you'd like. You may not repackage this tool and sell it, and any variations or improvements of this tool that are released must remain free and open source as well. If you run a commercial software package and wish to incoporate this tool into your software, feel free to shoot us an email. contact@corridordigital.com. In essence, this project is released under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+Please keep the Corridor Key name in any future variations!
 
 ## Acknowledgements and Licensing
 
