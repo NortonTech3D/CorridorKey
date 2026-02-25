@@ -526,6 +526,17 @@ def run_inference(clips):
             despeckle_size = 400
         logger.info(f"User selected: Auto-Despeckle Size {despeckle_size}px")
         
+    # 4. Refiner Strength Prompt
+    refiner_val = input("Enter Refiner Strength (multiplier) [default 1.0] (experimental): ").strip()
+    if refiner_val == "":
+        refiner_scale = 1.0
+    else:
+        try:
+            refiner_scale = float(refiner_val)
+        except ValueError:
+            refiner_scale = 1.0
+    logger.info(f"User selected: Refiner Strength {refiner_scale}")
+
     print("--------------------------\n")
     
     # Ensure Output Directory exists
@@ -641,7 +652,8 @@ def run_inference(clips):
                 fg_is_straight=USE_STRAIGHT_MODEL,
                 despill_strength=despill_strength,
                 auto_despeckle=auto_despeckle,
-                despeckle_size=despeckle_size
+                despeckle_size=despeckle_size,
+                refiner_scale=refiner_scale
             )
             
             pred_fg = res['fg'] # sRGB
